@@ -9,15 +9,17 @@
 	display: grid;
 	height: 100vh;
 	width: 100vw;
-	grid-template: 2fr 5fr / 1.5fr 5fr;
+	grid-template: 1fr 5fr / 1fr 5fr;
 }
 
 #header {
 	display: grid;
-	grid-template: repeat(3, 1fr) / repeat(20, 1fr);
+	grid-area: 1 / 2 / 2 / 3;
+	grid-template: repeat(2, 1fr) / repeat(20, 1fr);
 	background-color: white;
 	align-items: center;
 	justify-content: center;
+	
 
 }
 
@@ -52,20 +54,21 @@ input {
 
 #big-profile-icon {
 	grid-area: 2 / 1 / 4 / 3;
-	height: 60px;
-	width: 70px;
+	height: 50px;
+	width: 60px;
 	place-self: center;
 }
 
 p {
 	grid-area: 2 / 3 / 3 / 5;
-	align-self: center;
+	align-self: start;
 	font-size: 12px;
 }
 
 h4 {
-	grid-area: 3 / 3 / 4 / 7;
-	align-self: start;
+	grid-area: 2 / 3 / 3 / 7;
+	align-self: center;
+	
 }
 
 
@@ -130,10 +133,10 @@ button {
 #dashboard {
 	grid-area: 1 / 2 / 2 / 5;
 	align-self: center;
-	
+
 }
 
-#sidebar-menu-top {rid;
+#sidebar-menu-top {
 	display: grid;
 	grid-area: 2 / 1 / 3 / 2;
 	grid-template: repeat(6, 1fr) / 1fr 3fr;
@@ -162,7 +165,25 @@ a {
 }
 
 
-/* #main-content {
-	background-color: #DBD9DB;
+#main-content {
 	grid-area: 2 / 2 / 3 / 3;
-} */
+	display: grid;
+	grid-template: .25fr repeat(3, 1fr) / repeat(2, 1fr) .5fr;	
+	background-color: #DBD9DB;
+	grid-auto-flow: column;
+	gap: 15px;
+}
+
+#your-projects {
+	font-size: 18px;
+	grid-area: 1 / 1 / 2 / 4;
+}
+
+
+.card {
+
+	background-color: white;
+	height:150px;
+	width: 200px;
+	place-self: center;
+}
