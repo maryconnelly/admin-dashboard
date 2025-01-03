@@ -1,7 +1,6 @@
 * {
 	padding: 0;
 	margin: 0;
-	overflow: hidden;
 	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -9,7 +8,7 @@
 	display: grid;
 	height: 100vh;
 	width: 100vw;
-	grid-template: 1fr 5fr / 1fr 5fr;
+	grid-template: .25fr 5fr / 1fr 5fr;
 }
 
 #header {
@@ -32,7 +31,7 @@ input {
 	border-radius: 20px;
 	border: none;
 	height: 20px;
-	grid-area: 1 / 2 / 2 / 11;
+	grid-area: 1 / 2 / 2 / 12;
 }
 
 #notification-icon {
@@ -59,13 +58,13 @@ input {
 	place-self: center;
 }
 
-p {
+#hey-there {
 	grid-area: 2 / 3 / 3 / 5;
 	align-self: start;
 	font-size: 12px;
 }
 
-h4 {
+#header h4 {
 	grid-area: 2 / 3 / 3 / 7;
 	align-self: center;
 	
@@ -166,24 +165,140 @@ a {
 
 
 #main-content {
-	grid-area: 2 / 2 / 3 / 3;
 	display: grid;
-	grid-template: .25fr repeat(3, 1fr) / repeat(2, 1fr) .5fr;	
+	grid-area: 2 / 2 / 3 / 3;
+	grid-template: 1fr / 2fr .75fr;
+	background-color: #DBD9DB;
+
+}
+
+#card-container {
+	display:grid;
+	grid-area: 1 / 1 / 2 / 2;
+	grid-template: .15fr repeat(3, 1fr) / repeat(2, 1fr);
 	background-color: #DBD9DB;
 	grid-auto-flow: column;
 	gap: 15px;
+	padding: 15px;
+}
+
+	
+
+#your-projects, #announcements, #trending {
+	font-size: 18px;
 }
 
 #your-projects {
-	font-size: 18px;
 	grid-area: 1 / 1 / 2 / 4;
+	align-self: end;
+
 }
 
 
 .card {
 
+	display: grid;
+	grid-template: .25fr 2fr 1fr / .25fr repeat(3, 1fr) .5fr;
 	background-color: white;
-	height:150px;
-	width: 200px;
+	height:160px;
+	width: 350px;
+	place-self: start;
+	border-radius: 10px;
+	border-left: solid 10px #B098A4;
+	
+
+}
+
+.card h4 {
+	align-self: start;
+	grid-area: 2 / 2 / 2 / 4;
+
+}
+
+.card p {
+	align-self: end;
+	grid-area: 2 / 2 / 2 / 5;
+
+}
+
+ 
+.icon {
+	height: 20px;
+	width: 20px;
+}
+
+.star {
+	grid-area: 3 / 3 / 4 / 4;
+	justify-self: end;
+	align-self: center;
+}
+
+.eye {
+	grid-area: 3 / 4 / 4 / 5;
+	justify-self: center;
+	align-self: center;
+}
+
+.share {
+	grid-area: 3 / 5 / 4 / 6;
+	justify-self: start;
+	align-self: center;
+}
+
+#last-column {
+	display: grid;
+	grid-area: 1 / 2 / 2 / 3;
+	grid-template: .15fr 1fr .15fr 1fr .15fr / 1fr;
+	gap: 15px;
+} 
+
+#announcements {
+	grid-area: 1 / 1 / 2 / 5;
+	align-self: end;
+}
+
+#trending {
+	grid-area: 3 / 1 / 4 / 5;
+	align-self: end;
+}	
+
+#announcement-card {
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+
+}
+
+#announcement-card p { 
+	font-size: 10px;
+	padding-bottom: 10px;
+} 
+
+h6 {
+	padding-top: 10px;
+}
+
+hr {
+	justify-self: center;
+	width: 90%;
+	
+}
+
+#trending-card {
+	display:grid;
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+	grid-area: 4 / 1 / 5 / 2;
+	grid-template: repeat(4, 1fr) / 1fr 2fr;
+	grid-auto-flow: column;
+
+}
+
+
+img {
+	display: grid;
+	height: 50px;
+	width: 50px;
 	place-self: center;
 }
