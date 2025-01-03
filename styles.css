@@ -205,18 +205,20 @@ a {
 	place-self: start;
 	border-radius: 10px;
 	border-left: solid 10px #B098A4;
+	padding: 30px;
+	font-size: 14px;
 	
 
 }
 
-.card h4 {
-	align-self: start;
-	grid-area: 2 / 2 / 2 / 4;
+.card-header {
+	align-self: end;
+	grid-area: 1 / 2 / 2 / 5;
 
 }
 
 .card p {
-	align-self: end;
+	align-self: center;
 	grid-area: 2 / 2 / 2 / 5;
 
 }
